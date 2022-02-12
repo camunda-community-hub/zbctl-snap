@@ -9,7 +9,7 @@ This is the command-line client for [Camunda Cloud](https://camunda.com), packag
 
 ## Installation
 
-``bash
+```bash
 sudo snap install zbctl
 ```
 
