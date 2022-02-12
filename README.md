@@ -20,6 +20,8 @@ sudo snap install zbctl
 
 ## Usage
 
+[Official zbctl documentation](https://docs.camunda.io/docs/apis-clients/cli-client/index/)
+
 ```
 zbctl [options] [command]
 ```
