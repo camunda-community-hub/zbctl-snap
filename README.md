@@ -3,11 +3,16 @@
 
 # zbctl via Snap
 
+[![zbctl](https://snapcraft.io/zbctl/badge.svg)](https://snapcraft.io/zbctl)
+[![zbctl](https://snapcraft.io/zbctl/trending.svg?name=0)](https://snapcraft.io/zbctl)
+
 Zeebe CLI via Snap.
 
 This is the command-line client for [Camunda Cloud](https://camunda.com), packaged for installation on Linux via [Snap](https://snapcraft.io/about).
 
 ## Installation
+
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/zbctl)
 
 ```bash
 sudo snap install zbctl
