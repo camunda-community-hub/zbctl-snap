@@ -6,9 +6,11 @@
 [![zbctl](https://snapcraft.io/zbctl/badge.svg)](https://snapcraft.io/zbctl)
 [![zbctl](https://snapcraft.io/zbctl/trending.svg?name=0)](https://snapcraft.io/zbctl)
 
-Zeebe CLI via Snap.
+Zeebe CLI via [Snap](https://snapcraft.io/).
 
-This is the command-line client for [Camunda Cloud](https://camunda.com), packaged for installation on Linux via [Snap](https://snapcraft.io/about).
+This is a [Snap](https://snapcraft.io/about) package of
+[zbctl](https://docs.camunda.io/docs/apis-clients/cli-client/index/) (the command-line client for [Camunda Cloud](https://camunda.com))
+allowing easy installation and automatic updates on Linux.
 
 ## Installation
 
