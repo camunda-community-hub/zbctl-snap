@@ -16,8 +16,20 @@ allowing easy installation and automatic updates on Linux.
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/zbctl)
 
-```bash
-sudo snap install zbctl
+```sh
+snap install zbctl
+```
+
+## Updating
+
+```sh
+snap refresh zbctl
+```
+
+## Testing alpha releases
+
+```sh
+snap install zbctl --channel=beta
 ```
 
 ## Usage
@@ -70,9 +82,19 @@ Flags:
 Use "zbctl [command] --help" for more information about a command.
 ```
 
-## Update
+## Updating the Snap package
 
 If you want to submit a PR to update the package with a newer version of `zbctl`, you need to:
 
 1. Update the package version in `snap/snapcraft.yaml` to match the Zeebe release version number from the [Zeebe release page](https://github.com/camunda-cloud/zeebe/releases).
 2. Update the `source-checksum` with the value of the `camunda-cloud-zeebe-*.tar.gz.sha1sum` file from the [Zeebe release page](https://github.com/camunda-cloud/zeebe/releases).
+3. Build the package locally by running `snapcraft`.
+4. Test the installation using `snap install zbctl_*_amd64.snap --dangerous`
+
+Once a pull request is merged to the main branch, Snapcraft will automatically build the package and publish it to the `edge` channel. From there it can be installed using:
+
+```sh
+sudo refresh zbctl --channel=edge
+```
+
+@falko can promote the package to the `stable` channel on the [Snap Store](https://snapcraft.io/zbctl/releases).
