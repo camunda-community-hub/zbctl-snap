@@ -13,6 +13,8 @@ This is a [Snap](https://snapcraft.io/about) package of
 
 With this you can easily install zbctl on Linux and keep it up to date through the automatic updater of your distro. The package also shows up if you search for 'Camunda' or 'Zeebe' in your package manager, e.g. 'Ubuntu Software' desktop app.
 
+![Screenshot showing zbctl in the Ubuntu Software app](screen.jpg)
+
 The snap build is based the official zbctl binaries from the GitHub release page. However, the fully automated build infrastructure provided for free by Snapcraft would also allow cross compilation to currently unsupported CPU architectures. For such a multi-platform build one would have to build from the go sources. The next tools to package like this would be Camunda Modeler and zdb.
 
 ## Installation
