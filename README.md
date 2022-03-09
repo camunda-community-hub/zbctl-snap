@@ -97,10 +97,12 @@ If you want to submit a PR to update the package with a newer version of `zbctl`
 2. Build the package locally by running `snapcraft`.
 3. Test the installation using `snap install zbctl_*_amd64.snap --dangerous`
 
-Once a pull request is merged to the main branch, Snapcraft will automatically build the package and publish it to the `edge` channel. From there it can be installed using:
+Once a pull request is merged to the main branch, Snapcraft will automatically build the package and publish it to the `edge` channel. From there it can be installed and tested using:
 
 ```sh
 snap refresh zbctl --channel=edge
+zbctl version
+zbctl status
 ```
 
 @falko can promote the package to the `stable` channel on the [Snap Store](https://snapcraft.io/zbctl/releases).
