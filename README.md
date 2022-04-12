@@ -9,7 +9,7 @@
 Zeebe CLI via [Snap](https://snapcraft.io/).
 
 This is a [Snap](https://snapcraft.io/about) package of
-[zbctl](https://docs.camunda.io/docs/apis-clients/cli-client/index/) (the command-line client for [Camunda Cloud](https://camunda.com)).
+[zbctl](https://docs.camunda.io/docs/apis-clients/cli-client/index/) (the command-line client for [Camunda Platform 8](https://camunda.com)).
 
 With this you can easily install zbctl on Linux and keep it up to date through the automatic updater of your distro. The package also shows up if you search for 'Camunda' or 'Zeebe' in your package manager, e.g. 'Ubuntu Software' desktop app.
 
@@ -46,7 +46,7 @@ zbctl [options] [command]
 ```
 
 ```
-zbctl is a command line interface for Camunda Cloud designed to create and read resources inside a Zeebe broker.
+zbctl is a command line interface for Camunda Platform 8 designed to create and read resources inside a Zeebe broker.
 It can be used for regular development and maintenance tasks such as:
         * Deploying processes
         * Creating process instances and job workers
@@ -91,9 +91,9 @@ Use "zbctl [command] --help" for more information about a command.
 
 If you want to submit a PR to update the package with a newer version of `zbctl`, you need to:
 
-1. Run `./update.sh <version>` with a Zeebe version number from the [Zeebe release page](https://github.com/camunda-cloud/zeebe/releases) which will: 
+1. Run `./update.sh <version>` with a Zeebe version number from the [Zeebe release page](https://github.com/camunda/zeebe/releases) which will: 
     1. Update the package version in `snap/snapcraft.yaml` to match the Zeebe release version.
-    2. Update the `source-checksum` with the value of the `camunda-cloud-zeebe-*.tar.gz.sha1sum` file from the [Zeebe release page](https://github.com/camunda-cloud/zeebe/releases).
+    2. Update the `source-checksum` with the value of the `camunda-zeebe-*.tar.gz.sha1sum` file from the [Zeebe release page](https://github.com/camunda/zeebe/releases).
 2. Build the package locally by running `snapcraft`.
 3. Test the installation using `snap install zbctl_*_amd64.snap --dangerous`
 
