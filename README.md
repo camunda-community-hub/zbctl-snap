@@ -107,4 +107,4 @@ If you want to submit a PR to update the package with a newer version of `zbctl`
     zbctl version
     zbctl status
     ```
-1. @falko promotes the package to the `stable` channel on the [Snap Store](https://snapcraft.io/zbctl/releases).
+1. @falko promotes the package to the `stable` channel on the [Snap Store](https://snapcraft.io/zbctl/releases) after the [build](https://snapcraft.io/zbctl/builds) has finished.
