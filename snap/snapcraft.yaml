@@ -5,7 +5,7 @@ summary: zbctl is the command line interface to interact with Camunda 8 and Zeeb
 description: |
   zbctl is a command line interface for Camunda Platform 8 designed to create and read resources inside a Zeebe broker.
   It can be used for regular development and maintenance tasks such as:
-  * Deploying processes
+  * Deploying process and decision models
   * Creating process instances and job workers
   * Activating, completing, or failing jobs
   * Updating variables and retries
