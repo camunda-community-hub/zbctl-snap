@@ -1,5 +1,5 @@
 #!/bin/bash
-# usage: ./update.sh 1.3.5
+# usage: ./update.sh [-a]
 set -euxo pipefail
 if [ "$1" = -a ]; then
   # get latest alpha release
