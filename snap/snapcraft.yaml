@@ -1,6 +1,6 @@
 name: zbctl # you probably want to 'snapcraft register <name>'
 base: core20 # the base snap is the execution environment for this snap
-version: '8.6.0-alpha3' # just for humans, typically '1.2+git' or '1.3.2'
+version: '8.5.7' # just for humans, typically '1.2+git' or '1.3.2'
 summary: zbctl is the command line interface to interact with Camunda 8 and Zeebe # 79 char long summary
 description: |
   zbctl is a command line interface for Camunda Platform 8 designed to create and read resources inside a Zeebe broker.
@@ -27,8 +27,8 @@ apps:
 parts:
   zbctl:
     plugin: dump
-    source: https://github.com/camunda/zeebe/releases/download/$SNAPCRAFT_PROJECT_VERSION/camunda-zeebe-$SNAPCRAFT_PROJECT_VERSION.tar.gz
-    source-checksum: sha1/118a50299a5dec58b77caf68103917dbacc274fb
+    source: https://github.com/camunda/camunda/releases/download/$SNAPCRAFT_PROJECT_VERSION/camunda-zeebe-$SNAPCRAFT_PROJECT_VERSION.tar.gz
+    source-checksum: sha1/2b603562208dc025eef24fdf15a90490fef2d6a8
     source-subdir: bin
     prime:
       - zbctl
