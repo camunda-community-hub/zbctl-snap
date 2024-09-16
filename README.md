@@ -93,9 +93,9 @@ Use "zbctl [command] --help" for more information about a command.
 If you want to submit a PR to update the package with a newer version of `zbctl`, you need to:
 
 1. Run `./update.sh` which will:
-    1. Fetch that latest Zeebe version number from the [Zeebe release page](https://github.com/camunda/zeebe/releases) using `gh`.
+    1. Fetch that latest Zeebe version number from the [Zeebe release page](https://github.com/camunda/camunda/releases) using `gh`.
     1. Update the package version in `snap/snapcraft.yaml` to match the Zeebe release version.
-    1. Update the `source-checksum` with the value of the `camunda-zeebe-*.tar.gz.sha1sum` file from the [Zeebe release page](https://github.com/camunda/zeebe/releases).
+    1. Update the `source-checksum` with the value of the `camunda-zeebe-*.tar.gz.sha1sum` file from the [Zeebe release page](https://github.com/camunda/camunda/releases).
 1. Test locally
     1. Build the package locally by running `snapcraft`.
     1. Test the installation using `snap install zbctl_*_amd64.snap --dangerous`
