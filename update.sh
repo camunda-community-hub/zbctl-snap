@@ -3,7 +3,7 @@
 set -euxo pipefail
 if [ $# -eq 0 ]; then
   # get latest stable release
-  VERSION=$(gh release list --repo camunda/camunda --order desc --exclude-pre-releases --exclude-drafts --json tagName --jq '[.[] | select(.tagName | test("^8.\\d+.\\d+$"))][0].tagName')
+  VERSION=$(gh release list --repo camunda/camunda --order desc --exclude-pre-releases --exclude-drafts --json tagName --jq '[.[] | select(.tagName | test("^8.5.\\d+$"))][0].tagName')
 elif [ "$1" = --alpha ]; then
   # get latest alpha release
   VERSION=$(gh release list --repo camunda/camunda --order desc --exclude-drafts --json tagName --jq '[.[] | select(.tagName | test("^8.\\d+.\\d+-alpha\\d+$"))][0].tagName')
