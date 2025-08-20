@@ -7,7 +7,7 @@ update:
 
 .PHONY: alpha # Perform alpha release
 alpha:
-	./update.sh -a
+	./update.sh --alpha
 	echo "Pushing in 30 seconds... (Ctrl+C to interrupt)"
 	sleep 30
 	git push
