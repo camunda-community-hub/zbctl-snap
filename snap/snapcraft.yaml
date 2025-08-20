@@ -26,11 +26,14 @@ apps:
 
 parts:
   zbctl:
-    plugin: dump
-    source: https://github.com/camunda-community-hub/zeebe-client-go/releases/download/v$SNAPCRAFT_PROJECT_VERSION/zbctl
-    source-checksum: sha1/0000000000000000000000000000000000000000
-    organize:
-      zbctl: bin/zbctl
+    plugin: go
+    source: https://github.com/camunda-community-hub/zeebe-client-go.git
+    source-tag: v$SNAPCRAFT_PROJECT_VERSION
+    build-snaps:
+      - go/1.21/stable
+    override-build: |
+      cd cmd/zbctl
+      go build -o $SNAPCRAFT_PART_INSTALL/bin/zbctl .
     stage:
       - bin/zbctl
     prime:
