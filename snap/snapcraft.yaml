@@ -28,6 +28,7 @@ parts:
   zbctl:
     plugin: dump
     source: https://github.com/camunda-community-hub/zeebe-client-go/releases/download/v$SNAPCRAFT_PROJECT_VERSION/zbctl
+    source-type: file
     source-checksum: sha1/0000000000000000000000000000000000000000
     organize:
       zbctl: bin/zbctl
