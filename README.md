@@ -10,7 +10,7 @@
 Zeebe CLI via [Snap](https://snapcraft.io/).
 
 This is a [Snap](https://snapcraft.io/about) package of
-[zbctl](https://docs.camunda.io/docs/apis-clients/cli-client/index/) (the command-line client for [Camunda Platform 8](https://camunda.com)).
+[zbctl](https://github.com/camunda-community-hub/zeebe-client-go/edit/main/cmd/zbctl/zbctl.md) (the command-line client for [Camunda Platform 8](https://camunda.com)).
 
 With this you can easily install zbctl on Linux and keep it up to date through the automatic updater of your distro. The package also shows up if you search for 'Camunda' or 'Zeebe' in your package manager, e.g. 'Ubuntu Software' desktop app.
 
@@ -40,7 +40,8 @@ snap install zbctl --channel=beta
 
 ## Usage
 
-[Official zbctl documentation](https://docs.camunda.io/docs/apis-clients/cli-client/index/)
+* [zbctl Documentation](https://github.com/camunda-community-hub/zeebe-client-go/edit/main/cmd/zbctl/zbctl.md)
+* [zbctl Getting Started Guide](https://github.com/camunda-community-hub/zeebe-client-go/edit/main/cmd/zbctl/cli-get-started.md)
 
 ```
 zbctl [options] [command]
