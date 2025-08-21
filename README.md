@@ -16,7 +16,7 @@ With this you can easily install zbctl on Linux and keep it up to date through t
 
 ![Screenshot showing zbctl in the Ubuntu Software app](screen.jpg)
 
-The snap build is based the official zbctl binaries from the GitHub release page. However, the fully automated build infrastructure provided for free by Snapcraft would also allow cross compilation to currently unsupported CPU architectures. For such a multi-platform build one would have to build from the go sources. The next tools to package like this would be Camunda Modeler and zdb.
+The snap build is built from the Go sources using Snapcraft's automated build infrastructure, enabling cross compilation to multiple CPU architectures including amd64 and arm64. This allows the package to run on a wide variety of platforms including Raspberry Pi and ARM servers.
 
 ## Installation
 
@@ -99,7 +99,7 @@ If you want to submit a PR to update the package with a newer version of `zbctl`
     1. Update the `source-checksum` with the SHA1 checksum of the `zbctl` binary from the [zbctl release page](https://github.com/camunda-community-hub/zeebe-client-go/releases).
 1. Test locally
     1. Build the package locally by running `snapcraft pack`.
-    1. Test the installation using `snap install zbctl_*_amd64.snap --dangerous`
+    1. Test the installation using `snap install zbctl_*.snap --dangerous` (the filename will include the target architecture)
 1. Push to GitHub.
 1. Once a pull request is merged to the main branch, Snapcraft will automatically build the package and publish it to the `edge` channel.
 1. From there it can be installed and tested using:
