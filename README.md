@@ -98,7 +98,7 @@ If you want to submit a PR to update the package with a newer version of `zbctl`
     1. Update the package version in `snap/snapcraft.yaml` to match the zbctl release version.
     1. Update the `source-checksum` with the SHA1 checksum of the `zbctl` binary from the [zbctl release page](https://github.com/camunda-community-hub/zeebe-client-go/releases).
 1. Test locally
-    1. Build the package locally by running `snapcraft`.
+    1. Build the package locally by running `snapcraft pack`.
     1. Test the installation using `snap install zbctl_*_amd64.snap --dangerous`
 1. Push to GitHub.
 1. Once a pull request is merged to the main branch, Snapcraft will automatically build the package and publish it to the `edge` channel.
@@ -108,4 +108,4 @@ If you want to submit a PR to update the package with a newer version of `zbctl`
     zbctl version
     zbctl status
     ```
-1. @falko promotes the package to the `stable` channel on the [Snap Store](https://snapcraft.io/zbctl/releases) after the [build](https://snapcraft.io/zbctl/builds) has finished.
+1. @falko [triggers a build](https://snapcraft.io/zbctl/builds) and promotes the package to the `stable` channel on the [Snap Store](https://snapcraft.io/zbctl/releases) after the [build](https://snapcraft.io/zbctl/builds) has finished.
