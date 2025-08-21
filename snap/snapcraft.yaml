@@ -13,8 +13,8 @@ description: |
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
-architectures:
-  - amd64
+platforms:
+  amd64:
 
 apps:
   zbctl:
@@ -27,12 +27,12 @@ parts:
   zbctl:
     plugin: go
     source: https://github.com/camunda-community-hub/zeebe-client-go.git
-    source-tag: v$SNAPCRAFT_PROJECT_VERSION
+    source-tag: v$CRAFT_PROJECT_VERSION
     build-snaps:
       - go/1.21/stable
     override-build: |
       cd cmd/zbctl
-      CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo -ldflags "-w -X github.com/camunda-community-hub/zeebe-client-go/v8/cmd/zbctl/internal/commands.Version=${SNAPCRAFT_PROJECT_VERSION} -X github.com/camunda-community-hub/zeebe-client-go/v8/cmd/zbctl/internal/commands.Commit=$(git rev-parse HEAD)" -o $SNAPCRAFT_PART_INSTALL/bin/zbctl main.go
+      CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo -ldflags "-w -X github.com/camunda-community-hub/zeebe-client-go/v8/cmd/zbctl/internal/commands.Version=${CRAFT_PROJECT_VERSION} -X github.com/camunda-community-hub/zeebe-client-go/v8/cmd/zbctl/internal/commands.Commit=$(git rev-parse HEAD)" -o $CRAFT_PART_INSTALL/bin/zbctl main.go
     stage:
       - bin/zbctl
     prime:
