@@ -15,6 +15,7 @@ grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 platforms:
   amd64:
+  arm64:
 
 apps:
   zbctl:
@@ -32,7 +33,20 @@ parts:
       - go/1.21/stable
     override-build: |
       cd cmd/zbctl
-      CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -tags netgo -ldflags "-w -X github.com/camunda-community-hub/zeebe-client-go/v8/cmd/zbctl/internal/commands.Version=${CRAFT_PROJECT_VERSION} -X github.com/camunda-community-hub/zeebe-client-go/v8/cmd/zbctl/internal/commands.Commit=$(git rev-parse HEAD)" -o $CRAFT_PART_INSTALL/bin/zbctl main.go
+      # Set GOARCH based on the target architecture
+      case $CRAFT_ARCH_BUILD_FOR in
+        amd64)
+          export GOARCH=amd64
+          ;;
+        arm64)
+          export GOARCH=arm64
+          ;;
+        *)
+          echo "Unsupported architecture: $CRAFT_ARCH_BUILD_FOR"
+          exit 1
+          ;;
+      esac
+      CGO_ENABLED=0 GOOS=linux go build -a -tags netgo -ldflags "-w -X github.com/camunda-community-hub/zeebe-client-go/v8/cmd/zbctl/internal/commands.Version=${CRAFT_PROJECT_VERSION} -X github.com/camunda-community-hub/zeebe-client-go/v8/cmd/zbctl/internal/commands.Commit=$(git rev-parse HEAD)" -o $CRAFT_PART_INSTALL/bin/zbctl main.go
     stage:
       - bin/zbctl
     prime:
