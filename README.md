@@ -40,8 +40,8 @@ snap install zbctl --channel=beta
 
 ## Usage
 
-* [zbctl Documentation](https://github.com/camunda-community-hub/zeebe-client-go/edit/main/cmd/zbctl/zbctl.md)
-* [zbctl Getting Started Guide](https://github.com/camunda-community-hub/zeebe-client-go/edit/main/cmd/zbctl/cli-get-started.md)
+* [zbctl Documentation](https://github.com/camunda-community-hub/zeebe-client-go/blob/main/cmd/zbctl/zbctl.md)
+* [zbctl Getting Started Guide](https://github.com/camunda-community-hub/zeebe-client-go/blob/main/cmd/zbctl/cli-get-started.md)
 
 ```
 zbctl [options] [command]
